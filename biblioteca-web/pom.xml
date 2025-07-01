@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.cesumar.biblioteca</groupId>
+  <artifactId>biblioteca-web</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>biblioteca-web Maven Webapp</name>
+
+  <dependencies>
+  <!-- Servlet API para Tomcat 7 -->
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.0.1</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- JSF API (somente interfaces) -->
+  <dependency>
+    <groupId>javax.faces</groupId>
+    <artifactId>javax.faces-api</artifactId>
+    <version>2.2</version>
+    <!-- sem scope -->
+  </dependency>
+
+  <!-- JSF IMPLEMENTAÇÃO -->
+  <dependency>
+    <groupId>com.sun.faces</groupId>
+    <artifactId>jsf-impl</artifactId>
+    <version>2.2.20</version>
+  </dependency>
+
+  <!-- CDI API -->
+  <dependency>
+    <groupId>javax.enterprise</groupId>
+    <artifactId>cdi-api</artifactId>
+    <version>1.0-SP4</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- Weld (CDI implementation for Servlet) -->
+  <!-- <dependency>
+    <groupId>org.jboss.weld.servlet</groupId>
+    <artifactId>weld-servlet</artifactId>
+    <version>2.2.8.Final</version>
+  </dependency> -->
+</dependencies>
+
+
+  <build>
+    <finalName>biblioteca-web</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <path>/</path>
+          <port>8080</port>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

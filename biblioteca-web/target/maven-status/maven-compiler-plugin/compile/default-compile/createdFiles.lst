@@ -1,0 +1,3 @@
+com/cesumar/biblioteca/model/Livro.class
+com/cesumar/biblioteca/controller/LivroServlet.class
+com/seuprojeto/beans/LivroBean.class
